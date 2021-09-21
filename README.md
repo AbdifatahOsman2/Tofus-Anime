@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+Screenshot from 2021-09-20 10-28-13# Project Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Name
 
-## Available Scripts
+Tofus Anime
 
-In the project directory, you can run:
+## Project Description
 
-### `npm start`
+A rating app for all of anime to be discussed.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Wireframes
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![Desktop](https://user-images.githubusercontent.com/88213280/134072821-4cda00d2-2460-4302-b955-eb1c6da815df.jpg)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![edit form desktop](https://user-images.githubusercontent.com/88213280/134072827-c5c45f35-56e9-4304-925c-87655ecb714a.jpg)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![S3](https://user-images.githubusercontent.com/88213280/134049267-60878d9c-18fe-4c54-bca3-d43bda025576.jpg)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![S4](https://user-images.githubusercontent.com/88213280/134049284-73d59da4-ff48-415d-9ad2-3f0c180c1d98.jpg)
 
-### `npm run eject`
+## Component Hierarchy
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![Components Heirarchry](https://user-images.githubusercontent.com/88213280/134052160-ff552031-0d17-4c8c-9983-fbe4b6f17fe5.jpg)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## API and Data Sample
+```
+{
+    "records": [
+        {
+            "id": "recCOmOPqDMN4SZnu",
+            "fields": {
+                "Name": "One Piece",
+                "Creator": "Eiichiro Oda"
+            },
+            "createdTime": "2021-09-19T01:37:04.000Z"
+        },
+        {
+            "id": "recASzRcYN16QN6N9",
+            "fields": {
+                "Name": "One Punch Man",
+                "Creator": "ONE"
+            },
+            "createdTime": "2021-09-19T01:37:04.000Z"
+        },
+        {
+            "id": "recx6BZAavxCWY5Ds",
+            "fields": {},
+            "createdTime": "2021-09-19T01:37:04.000Z"
+        }
+    ],
+    "offset": "recx6BZAavxCWY5Ds"
+}
+```
+### MVP/PostMVP
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The functionality will then be divided into two separate lists: MVP and PostMVP.  Carefully decide what is placed into your MVP, as the client will expect this functionality to be implemented upon project completion.  
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### MVP 
+-render anime components onto page
+-create a button to create the anime component
+-allow users to edit that component
+-allow user to post comment about their favorite anime and add info
 
-## Learn More
+#### PostMVP  
+-add second to gather more info about certain anime
+-add more user interface
+- Add More styling for now
+## Timeframes
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+| Component | Priority | Estimated Time | Time Invested | Actual Time |
+| --- | :---: |  :---: | :---: | :---: |
+| Planning | H | 3hrs|  | 3hrs |
+| Setting up airtabel | H | 3hrs| | 3hrs |
+| Routing Setup/skeleton| H | 3hrs|  | 3hrs |
+| Axios Requests| H | 3hrs|  | 3hrs |
+| Improve Api calls| H | 3hrs|  | 3hrs |
+| Responsiveness| H | 3hrs|  | 3hrs |
+| Form Setup| H | 3hrs|  | 3hrs |
+| Form Handling| H | 3hrs| | 3hrs |
+| add Put| H | 3hrs|  | 3hrs |
+| Posts Rendering| H | 3hrs|| 3hrs |
+| Page setups| H | 3hrs| | 3hrs |
+| React Strcture| H | 3hrs| | 3hrs |
+| add styling | H | 3hrs|  | 3hrs |
+| style each component | H | 3hrs|  | 3hrs |
+| Total| H | | | 41hrs |
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## SWOT Analysis
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Strengths:
+I think initially I would have no problems getting my react componets setup. I am also very excited for the styling because i believe i have improved with that a lot.
+### Weaknesses:
+Im still not very comfortable with react API structure and feel like that will take me time to put things together.
+### Opportunities:
+I have an opportunity to improve the above weaknesses. I also have an opportunity to add images to my work and a second API.
+### Threats:
+Im afraid things will take me longer than they should becaue i feel as though i doubt myself when it comes to my time managment which will make things take longer for me.
