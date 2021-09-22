@@ -33,7 +33,6 @@ function Form(props) {
             const animeUrl = `${baseURL}/${params.id}`;
             await axios.put(animeUrl,{ fields: newAnimeObject}, config)
         }else{
-
             await axios.post(baseURL, { fields: newAnimeObject }, config);
             props.setToggleFetch((curr) => !curr)
         }
@@ -54,7 +53,7 @@ function Form(props) {
 
             <div className="comments-input">
                 <label htmlFor="">Comments:</label>
-                <input type="text" value={comments} required onChange={(e => setCommnets(e.target.value))} />
+                <input className="comment-maker" type="text" value={comments} required onChange={(e => setCommnets(e.target.value))} />
             </div>
 
             <div className="rating-input">

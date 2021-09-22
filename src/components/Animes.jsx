@@ -12,13 +12,13 @@ function Anime(props) {
     }
     return (
         <div className="anime">
-        <h2>{name}</h2>
-        <h3>{author}</h3>
-        <h4>{rating}/10</h4>
-        <p>{comments}</p>
-        <button onClick={handleDelete}>Delete</button>
+        <h2 className="name-cont">{name}</h2>
+        <h3 className="author-cont">{author}</h3>
+        <p className="rating-cont">{rating}/10</p>
+        <p className="comments-cont">{comments}</p>
+        <button className="delete-btn" onClick={handleDelete}>Delete</button>
         <Link to={`/edit/${props.anime.id}`}>
-            <button>Edit</button>
+            <button className="edit-btn">Edit</button>
         </Link>
         </div>
     )
