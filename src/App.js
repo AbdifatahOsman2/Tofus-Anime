@@ -14,11 +14,10 @@ function App() {
   const [toggleFetch, setToggleFetch] = useState(true)
 
   useEffect(() => {
-        //  url
       const getAnime = async () => {
         const response = await axios.get(baseURL, config);
         setAnimes(response.data.records)
-        console.log(response.data.records)
+        // console.log(response.data.records)
       }
       getAnime()
   },[toggleFetch])

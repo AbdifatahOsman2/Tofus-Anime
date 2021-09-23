@@ -1,14 +1,14 @@
 import { useState,useEffect } from "react"
 import axios from "axios"
 import {baseURL , config } from "../services"
-import { useParams } from "react-router-dom"
+import { useParams, useHistory } from "react-router-dom"
 function Form(props) {
     const [name, setName] = useState("")
     const [author, setAuthor] = useState("")
     const [comments, setCommnets] = useState("")
     const [rating, setRating] = useState(1)
     const params = useParams();
-
+    const history = useHistory();
 
     useEffect(() => {
         if(params.id){
@@ -27,6 +27,7 @@ function Form(props) {
         const newAnimeObject = {
             name,
             author,
+            comments,
             rating,
         }
         if(params.id){
@@ -34,8 +35,9 @@ function Form(props) {
             await axios.put(animeUrl,{ fields: newAnimeObject}, config)
         }else{
             await axios.post(baseURL, { fields: newAnimeObject }, config);
-            props.setToggleFetch((curr) => !curr)
         }
+        props.setToggleFetch((curr) => !curr)
+        history.push("/")
     }
 
     return (
@@ -53,14 +55,25 @@ function Form(props) {
 
             <div className="comments-input">
                 <label className="comment-label" htmlFor="">Comments:</label>
-                <input className="comment-maker" type="text" value={comments} required onChange={(e => setCommnets(e.target.value))} />
+                <textarea placeholder="comments" className="comment-maker" value={comments} required onChange={(e => setCommnets(e.target.value))} />
             </div>
+
 
             <div className="rating-input">
             <input className="input-meter" type="range" min={1} max={100} name="" id="" required value={rating} onChange={(e => setRating(e.target.valueAsNumber))} />
                 <label className="rating-label" htmlFor="">Rating:{rating}/100</label>
                 <button className="add-btn">ADD</button>
+                    <div className="selection-container">
+                    <label>
+                        <select name="type">
+                            <option value=""></option>
+                            <option value="anime">Anime</option>
+                            <option value="manga">Manga</option>
+                        </select>
+                    </label>
+                    </div>
             </div>
+            
                 <submit></submit>
             </form>
 

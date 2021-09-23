@@ -1,6 +1,7 @@
 import axios from "axios"
 import {baseURL, config} from "../services"
 import {Link} from "react-router-dom"
+import { useEffect,useState } from "react"
 
 function Anime(props) {
    const {name, author, rating, comments} = props.anime.fields
@@ -10,6 +11,9 @@ function Anime(props) {
         await axios.delete(Url, config);
         props.setToggleFetch((curr) => !curr)
     }
+
+// 
+
     return (
         <div className="anime">
         <h2 className="name-cont">{name}</h2>
@@ -18,7 +22,7 @@ function Anime(props) {
         <p className="comments-cont">{comments}</p>
         <button className="delete-btn" onClick={handleDelete}>Delete</button>
         <Link className="edit-link" to={`/edit/${props.anime.id}`}>
-            <button className="edit-btn">Add</button>
+            <button className="edit-btn">Edit</button>
         </Link>
         </div>
     )
