@@ -5,7 +5,7 @@ function Nav() {
         <div>
             <nav className="nav-bar">
                 <Link to="/">Home</Link>
-                <Link to="/new">+</Link>
+                <Link className="add-button" to="/new">+</Link>
                 <Link to="/more">More</Link>
             </nav>
         </div>

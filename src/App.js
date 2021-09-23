@@ -16,10 +16,24 @@ function App() {
   useEffect(() => {
       const getAnime = async () => {
         const response = await axios.get(baseURL, config);
-        setAnimes(response.data.records)
-        // console.log(response.data.records)
-      }
-      getAnime()
+
+          const url = `https://api.airtable.com/v0/appBRk6PwEffSic8E/comments`
+          const respComments =  await axios.get(url, config)
+          const comments = respComments.data.records;
+          const animeWithComments = response.data.records.map((anime) => {
+            return{
+              ...anime,
+              fields: {
+                ...anime.fields,
+                comments: anime.fields.comments ? comments.filter((comment) => anime.fields.comments.includes(comment.id)) : []
+              }
+            }
+          })
+          console.log(animeWithComments)
+          setAnimes(animeWithComments)
+        }
+        
+        getAnime()
   },[toggleFetch])
 
   return (

@@ -317,9 +317,13 @@
   .nav-bar a {
     text-decoration: none;
     color: rgb(255, 255, 255);
-    font-size: 25px;
+    font-size: 30px;
     border: none;
     padding: 5px;
+  }
+
+  .nav-bar .add-button{
+    font-weight: bolder;
   }
 
   .nav-bar a:focus {
@@ -374,24 +378,11 @@
     float: left;
     margin-left: 15px;
   }
-  .comments-input{
-    padding: 10px;
-    margin: 10px;
-    font-size: 50px;
-    justify-content: space-evenly;
+  .comments-container{
+    font-size: 30px;
+    grid-column: 2 / span 7;
   }
-  .comments-input .comment-maker {
-    padding: 1px;
-    height: 120px;
-    width: 305px;
-    border-radius: 20px;
-    padding: 10px;
-  }
-  .comment-label{
-    font-size: 20px;
-    float: left;
-    margin-left: 10px;
-  }
+
   .rating-input{
     padding: 10px;
     margin: 10px;
