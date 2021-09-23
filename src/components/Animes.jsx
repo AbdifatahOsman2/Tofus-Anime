@@ -17,8 +17,8 @@ function Anime(props) {
         <p className="rating-cont">{rating}/10</p>
         <p className="comments-cont">{comments}</p>
         <button className="delete-btn" onClick={handleDelete}>Delete</button>
-        <Link to={`/edit/${props.anime.id}`}>
-            <button className="edit-btn">Edit</button>
+        <Link className="edit-link" to={`/edit/${props.anime.id}`}>
+            <button className="edit-btn">Add</button>
         </Link>
         </div>
     )

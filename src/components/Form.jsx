@@ -41,24 +41,24 @@ function Form(props) {
     return (
 
             <form onSubmit={handleSubmit} className="form-component">
-            <div className="anime-input">
-                <label htmlFor="">Anime:</label>
-                <input type="text" value={name} autoFocus required onChange={(e => setName(e.target.value))} />            
+            <div className="anime-input-container">
+                <label className="anime-label" htmlFor="">Anime</label>
+                <input className="anime-input" placeholder="Anime" type="text" value={name} autoFocus required onChange={(e => setName(e.target.value))} />            
             </div>
 
-            <div className="author-input">
-                <label htmlFor="">Creator:</label>
-                <input type="text" value={author} required onChange={(e => setAuthor(e.target.value))} />
+            <div className="author-input-container">
+                <label className="author-label" htmlFor="">Author</label>
+                <input className="author-input" placeholder="Creator of said anime" type="text" value={author} required onChange={(e => setAuthor(e.target.value))} />
             </div>
 
             <div className="comments-input">
-                <label htmlFor="">Comments:</label>
+                <label className="comment-label" htmlFor="">Comments:</label>
                 <input className="comment-maker" type="text" value={comments} required onChange={(e => setCommnets(e.target.value))} />
             </div>
 
             <div className="rating-input">
-                <label htmlFor="">Rating:{rating}/10</label>
-                <input className="input-meter" type="range" min={1} max={10} name="" id="" required value={rating} onChange={(e => setRating(e.target.valueAsNumber))} />
+            <input className="input-meter" type="range" min={1} max={100} name="" id="" required value={rating} onChange={(e => setRating(e.target.valueAsNumber))} />
+                <label className="rating-label" htmlFor="">Rating:{rating}/100</label>
                 <button className="add-btn">ADD</button>
             </div>
                 <submit></submit>

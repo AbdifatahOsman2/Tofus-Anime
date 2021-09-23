@@ -1,179 +1,339 @@
 .App {
   text-align: center;
-  background: radial-gradient(#5e5757, #202022);
+  background: #3D3E48;
+  background: -webkit-radial-gradient(center, #3D3E48, #000000);
+  background: -moz-radial-gradient(center, #3D3E48, #000000);
+  background: radial-gradient(ellipse at center, #3D3E48, #000000);
   min-height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(1, 1fr);
+  grid-gap: 10px;
 }
 
 .item-container{
   background: radial-gradient(black,black);
   color: aqua;
+  background: none;
+  /* display: grid;
+  grid-template-columns: repeat(12 , 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  margin: 0;
+  padding-bottom: 105px;
+  border-radius: 20px;
+  font-size: 10px;
+  max-height: 100px;
+  max-width: 100px; */
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 480px) {
+
   .App {
-    text-align: center;
-    background: radial-gradient(#5e5757, #202022);
+    background: #FFFFFF;
+    background: -webkit-linear-gradient(bottom right, #FFFFFF, #FAFBE1);
+    background: -moz-linear-gradient(bottom right, #FFFFFF, #FAFBE1);
+    background: linear-gradient(to top left, #FFFFFF, #FAFBE1);
     min-height: 100vh;
-    display: grid;
     grid-template-columns: 1fr;
     width: 100vw;
+
   }
+
+
+
   .item-container{
-    color: rgb(255, 217, 0);
-    grid-column: 1/ span 2;
-    grid-row: 1 / span 1;
+    background: none;
+    color: rgb(255, 255, 255);
+    align-items: center;
     width: 300px;
-    margin-left: 30px;
+    margin:10px;
+    
   }
   .anime {
     display: grid;
     grid-template-columns: repeat(6 , 1fr);
     grid-template-rows: repeat(6, 1fr);
-    background: rgb(19, 1, 59);
+    background: #02124D;
+    background: -webkit-radial-gradient(center, #02124D, #011C38);
+    background: -moz-radial-gradient(center, #02124D, #011C38);
+    background: radial-gradient(ellipse at center, #02124D, #011C38);
     padding-bottom: 105px;
     margin: 10px;
     border-radius: 20px;
     font-size: 10px;
-    height: 50px;
+    max-height: 100px;
+    align-items: center;
+    width: 90vw;
+    box-shadow: -3px -2px 5px rgb(17, 15, 15);
   }
   .anime .name-cont{
-    grid-row: 1/ span 6;
-    grid-column: 1 / span 1;
+    grid-row: 1/ span 1;
+    grid-column: 1 / span 7;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .anime .author-cont{
+    grid-row: 5 / span 3;
+    grid-column: 1 / span 3;
+    font-size: 15px;
+  }
+  .anime .rating-cont{
+    grid-row: 5 /span 1;
+    grid-column: 7.5 / 1;
+    font-size: 15px;
+  }
+  .anime .comments-cont{
+    grid-row: 4 / span 0.5;
+    grid-column: 1 /span 7;
+    font-size: 19px;
+  }
+  .anime .delete-btn{
+    grid-row: 1 /span 1;
+    grid-column: 7 /span 1;
+    visibility: hidden;
+  }
+  .anime .delete-btn::after{
+    content: "x";
+    visibility: visible;
+    color: burlywood;
+    font-size: 30px;
+    grid-row: 1 /span 1;
+    margin: 0px 5px 0px 0px;
+    grid-column: 7 /span 1;
+    font-weight: bold;
+  }
+
+  .anime .edit-link{
+    grid-row: 5 /span 1;
+    grid-column: 7 /span 1;
+  }
+  .anime .edit-btn{
+    grid-row: 5 /span 1;
+    grid-column: 7 /span 1;
+    font-size: 15px;
+    pad: 5px;
+    margin: 5px 0px 0px 0px;
+    border: 3px solid rgb(253, 104, 4);
+    text-align: center;
+    box-shadow:inset 0px 1px 0px 0px #fff6af;
+    background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+    background-color:#ffec64;
+    border-radius:6px;
+    border:1px solid #ffaa22;
+
   }
 
   .nav-bar{
-    color: black;
-    background-color: blue;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(0, 0, 0);
     grid-row: 2 / span 1;
+
   }
   .nav-bar a {
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 25px;
+    border: none;
+    padding: 5px;
   }
+
+  .nav-bar a:focus {
+    background-color: rgb(0, 23, 194);
+  }
+  .home-searchbar{
+    margin: 10px;
+    width: 200px;
+    height: 25px;
+    font-size: 20px;
+    border-radius: 8px;
+  }
+
   .form-component{
-    grid-column: 1/ span 1;
-    grid-row: 1 / span 1;
     display: flex;
     flex-direction: column;
-    margin: 5px;
     justify-content: space-evenly;
   }
-  .anime-input{
+  .anime-input-container{
     padding: 10px;
     margin: 10px;
-    font-size: 50px;
+    font-size: 30px;
+  }
+  .anime-input{
+    margin: 10px;
+    width: 300px;
+    height: 25px;
+    font-size: 20px;
+    border-radius: 50px;
+  }
+  .anime-label{
+    font-size: 20px;
+    float: left;
+    margin-left: 15px;
+  }
+
+  .author-input-container{
+    padding: 10px;
+    margin: 10px;
+    font-size: 30px;
+  }
+  .author-input{
+    margin: 10px;
+    width: 300px;
+    height: 25px;
+    font-size: 20px;
+    border-radius: 50px;
+
+  }
+  .author-label{
+    font-size: 20px;
+    float: left;
+    margin-left: 15px;
   }
   .comments-input{
-    padding: 10px;
-    margin: 10px;
     font-size: 50px;
+    justify-content: space-evenly;
   }
   .comments-input .comment-maker {
     padding: 1px;
-    margin-top: 10px;
     height: 120px;
-    width: 300px;
-  }
-  .author-input{
+    width: 305px;
+    border-radius: 20px;
     padding: 10px;
-    margin: 10px;
-    font-size: 50px;
+  }
+  .comment-label{
+    font-size: 20px;
+    float: left;
+    margin-left: 30px;
   }
   .rating-input{
     padding: 10px;
     margin: 10px;
     font-size: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
-  
+  .add-btn{
+    margin: 0px;
+    display: inline;
+    width: 100px;
+    border-radius: 0px;
+    padding: 18px 30px;
+    background-color: white;
+    border: 1px solid black;
+    align-self: center;
+  }
+  .rating-input .rating-label{
+    font-size: 20px;
+    align-self:flex-start;
+    margin: 5px;
+  }
 
 
 /* input slider range styling*/
+input[type=range] {
+  width: 100%;
+  margin: 4.3px 0;
+  background-color: transparent;
+  -webkit-appearance: none;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  background: #ffd900;
+  border: 0.2px solid #000101;
+  border-radius: 1.3px;
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+}
+input[type=range]::-webkit-slider-thumb {
+  margin-top: -4.5px;
+  width: 16px;
+  height: 17px;
+  background: rgba(255, 217, 0, 0.9);
+  border: 1px solid #000000;
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #ffdd1a;
+}
+input[type=range]::-moz-range-track {
+  background: #ffd900;
+  border: 0.2px solid #000101;
+  border-radius: 1.3px;
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+}
+input[type=range]::-moz-range-thumb {
+  width: 16px;
+  height: 17px;
+  background: rgba(255, 217, 0, 0.9);
+  border: 1px solid #000000;
+  border-radius: 50px;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  border-width: 5.3px 0;
+  color: transparent;
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+}
+input[type=range]::-ms-fill-lower {
+  background: #e6c300;
+  border: 0.2px solid #000101;
+  border-radius: 2.6px;
+}
+input[type=range]::-ms-fill-upper {
+  background: #ffd900;
+  border: 0.2px solid #000101;
+  border-radius: 2.6px;
+}
+input[type=range]::-ms-thumb {
+  width: 16px;
+  height: 17px;
+  background: rgba(255, 217, 0, 0.9);
+  border: 1px solid #000000;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 0px;
+  /*Needed to keep the Edge thumb centred*/
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #ffd900;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #ffdd1a;
+}
+/*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
+how to remove the virtical space around the range input in IE*/
+@supports (-ms-ime-align:auto) {
+  /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
   input[type=range] {
-    width: 100%;
-    margin: 11.8px 0;
-    background-color: transparent;
-    -webkit-appearance: none;
+    margin: 0;
+    /*Edge starts the margin from the thumb, not the track as other browsers do*/
   }
-  input[type=range]:focus {
-    outline: none;
-  }
-  input[type=range]::-webkit-slider-runnable-track {
-    background: #3071a9;
-    border: 0.2px solid #010101;
-    border-radius: 1.3px;
-    width: 100%;
-    height: 8.4px;
-    cursor: pointer;
-  }
-  input[type=range]::-webkit-slider-thumb {
-    margin-top: -12px;
-    width: 38px;
-    height: 32px;
-    background: rgba(200, 57, 68, 0.3);
-    border: 0.8px solid #000000;
-    border-radius: 12px;
-    cursor: pointer;
-    -webkit-appearance: none;
-  }
-  input[type=range]:focus::-webkit-slider-runnable-track {
-    background: #367ebd;
-  }
-  input[type=range]::-moz-range-track {
-    background: #3071a9;
-    border: 0.2px solid #010101;
-    border-radius: 1.3px;
-    width: 100%;
-    height: 8.4px;
-    cursor: pointer;
-  }
-  input[type=range]::-moz-range-thumb {
-    width: 38px;
-    height: 32px;
-    background: rgba(200, 57, 68, 0.3);
-    border: 10px solid #000000;
-    border-radius: 12px;
-    cursor: pointer;
-  }
-  input[type=range]::-ms-track {
-    background: transparent;
-    border-color: transparent;
-    border-width: 12.8px 0;
-    color: transparent;
-    width: 100%;
-    height: 8.4px;
-    cursor: pointer;
-  }
-  input[type=range]::-ms-fill-lower {
-    background: #2a6495;
-    border: 0.2px solid #010101;
-    border-radius: 2.6px;
-  }
-  input[type=range]::-ms-fill-upper {
-    background: #3071a9;
-    border: 0.2px solid #010101;
-    border-radius: 2.6px;
-  }
-  input[type=range]::-ms-thumb {
-    width: 38px;
-    height: 32px;
-    background: rgba(200, 57, 68, 0.3);
-    border: 0.8px solid #000000;
-    border-radius: 12px;
-    cursor: pointer;
-    margin-top: 0px;
-    /*Needed to keep the Edge thumb centred*/
-  }
-  input[type=range]:focus::-ms-fill-lower {
-    background: #3071a9;
-  }
-  input[type=range]:focus::-ms-fill-upper {
-    background: #367ebd;
-  }
-
+}
 /* input slider range styling*/
 
 

@@ -20,15 +20,14 @@ function App() {
         setAnimes(response.data.records)
         console.log(response.data.records)
       }
-
       getAnime()
-
   },[toggleFetch])
 
   return (
     <div className="App">
     <Nav/>
     <Route exact path="/">
+    {<input className="home-searchbar" placeholder="search"/>}
     <div className="item-container">
     {animes.map((anime) => (
       <Anime key ={anime.id} anime={anime} setToggleFetch={setToggleFetch}/>

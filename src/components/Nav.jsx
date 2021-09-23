@@ -5,8 +5,8 @@ function Nav() {
         <div>
             <nav className="nav-bar">
                 <Link to="/">Home</Link>
-                <Link to="/new">Add</Link>
-                <Link to="/more">More Anime</Link>
+                <Link to="/new">+</Link>
+                <Link to="/more">More</Link>
             </nav>
         </div>
     )
