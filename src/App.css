@@ -208,7 +208,7 @@
     background: -moz-linear-gradient(bottom right, #FFFFFF, #FAFBE1);
     background: linear-gradient(to top left, #FFFFFF, #FAFBE1);
     min-height: 100vh;
-    width: 100vw;
+    max-width: 100vw;
   }
 
   .item-container{
@@ -247,7 +247,6 @@
     font-size: 15px;
   }
   .anime .comments-cont{
-
     font-size: 19px;
   }
   .anime .delete-btn{
@@ -405,17 +404,14 @@
     flex-wrap: wrap;
     padding: 10px;
   }
-
-
   input:focus{
     outline: none;
   }
-
   .selection-container select{
     color: blue;
+    font-size: 20px;
     margin-top: 30px;
-    width:  50vw;
-
+    width:  80vw;
   }
 
 

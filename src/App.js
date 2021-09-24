@@ -66,7 +66,7 @@ function App() {
         <Form anime={animes} setToggleFetch={setToggleFetch} />
       </Route>  
 
-        <footer></footer>
+
 
     </div>
   );
