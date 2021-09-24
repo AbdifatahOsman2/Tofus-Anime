@@ -107,9 +107,6 @@
   grid-column: 6/ span 1;
 }
 
-
-
-
 .form-component{
   display: flex;
   flex-direction: column;
@@ -223,6 +220,7 @@
   }
   .anime {
     display: flex;
+    flex-direction: column;
     background: #02124D;
     background: -webkit-radial-gradient(center, #02124D, #011C38);
     background: -moz-radial-gradient(center, #02124D, #011C38);
@@ -234,6 +232,7 @@
     width: 90vw;
     box-shadow: -3px -2px 5px rgb(17, 15, 15);
     min-height: 200px;
+    flex-wrap: wrap;
   }
   .anime .name-cont {
     justify-content: flex-end;
@@ -242,11 +241,9 @@
   }
 
   .anime .author-cont{
-
     font-size: 25px;
   }
   .anime .rating-cont{
-
     font-size: 15px;
   }
   .anime .comments-cont{
@@ -359,10 +356,11 @@
   }
   .comments-container{
     font-size: 30px;
-    grid-column: 2 / span 7;
+
   }
   .comments-container .comment{
     color: darkgoldenrod;
+ 
   }
   .rating-input{
     padding: 10px;
@@ -404,6 +402,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding: 10px;
   }
 

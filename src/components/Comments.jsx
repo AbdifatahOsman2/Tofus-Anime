@@ -1,13 +1,14 @@
 import { useState,useEffect } from "react"
 import axios from "axios"
 import {commentURL , config } from "../services"
-import { useParams } from "react-router"
+import { useParams, useHistory } from "react-router"
 
 export default function Comments(props) {
     const comments = props.anime
     console.log(comments)
     const [comment, setComment] =useState('');
     const params = useParams()
+    const history =useHistory()
 
     const handleComment = async () => {
         const newComment = {
@@ -15,6 +16,8 @@ export default function Comments(props) {
             comment: comment
         }
         const resp = await axios.post(commentURL, {fields: newComment}, config)
+        props.setToggleFetch((toggle) => !toggle)
+        history.push('/')
     }
     
     return(
