@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Nav from './components/Nav';
 import MoreInfo from "./components/Moreinfo";
+import Comments from "./components/Comments";
 import './App.css';
 
 function App() {
@@ -29,7 +30,7 @@ function App() {
               }
             }
           })
-          console.log(animeWithComments)
+          // console.log(animeWithComments)
           setAnimes(animeWithComments)
         }
         
@@ -52,6 +53,10 @@ function App() {
     <Route path="/new">
       <Form anime={animes} setToggleFetch={setToggleFetch}/>
     </Route>
+
+      <Route path="/comment/:id">
+      <Comments anime={animes}/>
+      </Route>
 
     <Route path="/more">
     <MoreInfo/>

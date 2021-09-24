@@ -14,22 +14,27 @@ function Anime(props) {
         await axios.delete(Url, config);
         props.setToggleFetch((curr) => !curr)
     }
+
     return (
+        <div className="anime-container">
         <div className="anime">
             <h2 className="name-cont">{name}</h2>
             <h3 className="author-cont">{author}</h3>
             <p className="rating-cont">{rating}/10</p>
            <div className="comments-container"> {
                 comments.map((comment) => (
-
                     <p className="comment">{comment.fields.comment}</p>
-
                 ))}
             </div>
+
             <button className="delete-btn" onClick={handleDelete}>Delete</button>
             <Link className="edit-link" to={`/edit/${props.anime.id}`}>
                 <button className="edit-btn">Edit</button>
             </Link>
+            <Link className="add-comment-link" to={`/comment/${props.anime.id}`}>
+                    <button className="add-comment">Add Comment</button>
+            </Link>
+        </div>
         </div>
     )
 }

@@ -231,6 +231,7 @@
     margin:10px;
     
   }
+
   .anime {
     display: grid;
     grid-template-columns: repeat(6 , 1fr);
@@ -243,10 +244,12 @@
     margin: 10px;
     border-radius: 20px;
     font-size: 10px;
-    max-height: 100px;
     align-items: center;
     width: 90vw;
     box-shadow: -3px -2px 5px rgb(17, 15, 15);
+    min-height: 200px;
+
+
   }
   .anime .name-cont{
     grid-row: 1/ span 1;
@@ -303,9 +306,21 @@
     background-color:#ffec64;
     border-radius:6px;
     border:1px solid #ffaa22;
-
   }
-
+  .add-comment-link{
+    grid-row: 5 / span 1;
+    grid-column: 6/ span 1;
+  }
+.add-comment{
+  margin: 5px 0px 0px 0px;
+  border: 3px solid rgb(253, 104, 4);
+  text-align: center;
+  box-shadow:inset 0px 1px 0px 0px #fff6af;
+  background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+  background-color:#ffec64;
+  border-radius:6px;
+  border:1px solid #ffaa22;
+}
   .nav-bar{
     color: rgb(255, 255, 255);
     display: flex;
@@ -382,7 +397,9 @@
     font-size: 30px;
     grid-column: 2 / span 7;
   }
-
+  .comments-container .comment{
+    color: darkgoldenrod;
+  }
   .rating-input{
     padding: 10px;
     margin: 10px;
@@ -407,6 +424,16 @@
     align-self:flex-start;
     margin: 5px;
   }
+
+  .comment-component{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+
+
 
 
 /* input slider range styling*/
