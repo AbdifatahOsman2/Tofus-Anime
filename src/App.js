@@ -55,7 +55,7 @@ function App() {
       </Route>
 
       <Route path="/comment/:id">
-        <Comments anime={animes} />
+        <Comments anime={animes} setToggleFetch={setToggleFetch}/>
       </Route>
 
       <Route path="/more">
@@ -64,7 +64,9 @@ function App() {
 
       <Route path="/edit/:id">
         <Form anime={animes} setToggleFetch={setToggleFetch} />
-      </Route>
+      </Route>  
+
+        <footer></footer>
 
     </div>
   );

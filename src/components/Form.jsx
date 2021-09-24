@@ -33,7 +33,6 @@ function Form(props) {
         const newAnimeObject = {
             name,
             author,
-            comments,
             rating,
         }
         if(params.id){
@@ -71,10 +70,6 @@ function Form(props) {
                 <input className="author-input" placeholder="Creator of said anime/manga" type="text" value={author} required onChange={(e => setAuthor(e.target.value))} />
             </div>
 
-            <div className="comments-input">
-                <label className="comment-label" htmlFor="">Comments:</label>
-                <textarea placeholder="comments" className="comment-maker" value={comments} required onChange={(e => setCommnets(e.target.value))} />
-            </div>
             
 
             <div className="rating-input">

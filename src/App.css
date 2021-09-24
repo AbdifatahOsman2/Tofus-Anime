@@ -271,28 +271,12 @@
   }
 
   .anime .edit-link{
-    margin-right: 250px;
-    order: 0;
+    order: 8;
+    visibility: hidden;
   }
-  .anime .edit-btn{
-    grid-row: 5 /span 1;
-    grid-column: 7 /span 1;
-    font-size: 15px;
-    pad: 5px;
-    margin: 5px 0px 0px 0px;
-    border: 3px solid rgb(253, 104, 4);
-    text-align: center;
-    box-shadow:inset 0px 1px 0px 0px #fff6af;
-    background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
-    background-color:#ffec64;
-    border-radius:6px;
-    border:1px solid #ffaa22;
-  }
-  .add-comment-link{
-    grid-row: 5 / span 1;
-    grid-column: 6/ span 1;
-  }
+
 .add-comment{
+  font-size: 20px;
   margin: 5px 0px 0px 0px;
   border: 3px solid rgb(253, 104, 4);
   text-align: center;
