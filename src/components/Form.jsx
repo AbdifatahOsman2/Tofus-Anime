@@ -49,14 +49,26 @@ function Form(props) {
     return (
 
             <form onSubmit={handleSubmit} className="form-component">
+            <div className="selection-container">
+            <label>
+                <select className="selection" name="type">
+                    <option value=""></option>
+                    <option value="anime">Anime</option>
+                    <option value="manga">Manga</option>
+                </select>
+            </label>
+            </div>
+
             <div className="anime-input-container">
                 <label className="anime-label" htmlFor="">Anime</label>
-                <input className="anime-input" placeholder="Anime" type="text" value={name} autoFocus required onChange={(e => setName(e.target.value))} />            
+                <input className="anime-input" placeholder="Anime/Manga" type="text" value={name} autoFocus required onChange={(e => setName(e.target.value))} />            
             </div>
+
+  
 
             <div className="author-input-container">
                 <label className="author-label" htmlFor="">Author</label>
-                <input className="author-input" placeholder="Creator of said anime" type="text" value={author} required onChange={(e => setAuthor(e.target.value))} />
+                <input className="author-input" placeholder="Creator of said anime/manga" type="text" value={author} required onChange={(e => setAuthor(e.target.value))} />
             </div>
 
             <div className="comments-input">
@@ -67,17 +79,9 @@ function Form(props) {
 
             <div className="rating-input">
             <input className="input-meter" type="range" min={1} max={100} name="" id="" required value={rating} onChange={(e => setRating(e.target.valueAsNumber))} />
-                <label className="rating-label" htmlFor="">Rating:{rating}/100</label>
+                <label className="rating-label" htmlFor="">{rating}/100</label>
                 <button className="add-btn">ADD</button>
-                    <div className="selection-container">
-                    <label>
-                        <select name="type">
-                            <option value=""></option>
-                            <option value="anime">Anime</option>
-                            <option value="manga">Manga</option>
-                        </select>
-                    </label>
-                    </div>
+
             </div>
             
             </form>

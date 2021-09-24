@@ -1,3 +1,4 @@
+@media screen and (max-width: 2560px) {
 
 .App {
   text-align: center;
@@ -27,9 +28,6 @@
   background-color: rgb(60, 69, 143);
 }
 
-
-
-
 .item-container{
   background: none;
   color: rgb(255, 255, 255);
@@ -41,21 +39,17 @@
 }
 
 .anime {
-  display: grid;
-  grid-template-columns: repeat(6 , 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  padding-bottom: 105px;
+  display: flex;
+  flex-direction: column;
   margin: 10px;
   border-radius: 20px;
   font-size: 10px;
-  max-height: 100px;
   align-items: center;
   width: 50vw;
   box-shadow: -3px -2px 5px rgb(17, 15, 15);
 }
 .anime .name-cont {
-  grid-row: 1/ span 1;
-  grid-column: 1 / span 7;
+  justify-content: flex-end;
   font-weight: bold;
   font-size: 20px;
 }
@@ -64,11 +58,7 @@
   grid-column: 1 / span 3;
   font-size: 15px;
 }
-.anime .comments-cont{
-  grid-row: 4 / span 1;
-  grid-column: 1 /span 7;
-  font-size: 19px;
-}
+
 .anime .rating-cont{
   grid-row: 5 /span 1;
   grid-column: 7.5 / 1;
@@ -111,6 +101,15 @@
   border:1px solid #ffaa22;
   cursor: pointer;
 }
+
+.add-comment-link{
+  grid-row: 5/ span 1;
+  grid-column: 6/ span 1;
+}
+
+
+
+
 .form-component{
   display: flex;
   flex-direction: column;
@@ -194,10 +193,7 @@
   align-self: center;
 
 }
-.add-btn:hover{
-  background-color: grey;
-  transition-delay: 0.4s;
-}
+
 .rating-input .rating-label{
   font-size: 20px;
   align-self:flex-start;
@@ -206,8 +202,7 @@
 }
 
 
-
-
+}
 @media screen and (max-width: 480px) {
 
   .App {
@@ -216,12 +211,8 @@
     background: -moz-linear-gradient(bottom right, #FFFFFF, #FAFBE1);
     background: linear-gradient(to top left, #FFFFFF, #FAFBE1);
     min-height: 100vh;
-    grid-template-columns: 1fr;
     width: 100vw;
-
   }
-
-
 
   .item-container{
     background: none;
@@ -229,18 +220,13 @@
     align-items: center;
     width: 300px;
     margin:10px;
-    
   }
-
   .anime {
-    display: grid;
-    grid-template-columns: repeat(6 , 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    display: flex;
     background: #02124D;
     background: -webkit-radial-gradient(center, #02124D, #011C38);
     background: -moz-radial-gradient(center, #02124D, #011C38);
     background: radial-gradient(ellipse at center, #02124D, #011C38);
-    padding-bottom: 105px;
     margin: 10px;
     border-radius: 20px;
     font-size: 10px;
@@ -248,35 +234,30 @@
     width: 90vw;
     box-shadow: -3px -2px 5px rgb(17, 15, 15);
     min-height: 200px;
-
-
   }
-  .anime .name-cont{
-    grid-row: 1/ span 1;
-    grid-column: 1 / span 7;
+  .anime .name-cont {
+    justify-content: flex-end;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 30px;
   }
 
   .anime .author-cont{
-    grid-row: 5 / span 3;
-    grid-column: 1 / span 3;
-    font-size: 15px;
+
+    font-size: 25px;
   }
   .anime .rating-cont{
-    grid-row: 5 /span 1;
-    grid-column: 7.5 / 1;
+
     font-size: 15px;
   }
   .anime .comments-cont{
-    grid-row: 4 / span 0.5;
-    grid-column: 1 /span 7;
+
     font-size: 19px;
   }
   .anime .delete-btn{
-    grid-row: 1 /span 1;
-    grid-column: 7 /span 1;
     visibility: hidden;
+    order: -1;
+    justify-self: flex-end;
+    margin-left: 250px;
   }
   .anime .delete-btn::after{
     content: "x";
@@ -290,8 +271,8 @@
   }
 
   .anime .edit-link{
-    grid-row: 5 /span 1;
-    grid-column: 7 /span 1;
+    margin-right: 250px;
+    order: 0;
   }
   .anime .edit-btn{
     grid-row: 5 /span 1;
@@ -327,7 +308,6 @@
     justify-content: space-between;
     background-color: rgb(0, 0, 0);
     grid-row: 2 / span 1;
-
   }
   .nav-bar a {
     text-decoration: none;
@@ -364,8 +344,8 @@
   }
   .anime-input{
     margin: 10px;
-    width: 300px;
-    height: 25px;
+    max-width: 100vw;
+    height: 45px;
     font-size: 20px;
     border-radius: 50px;
   }
@@ -382,8 +362,8 @@
   }
   .author-input{
     margin: 10px;
-    width: 300px;
-    height: 25px;
+    max-width: 100vw;
+    height: 45px;
     font-size: 20px;
     border-radius: 50px;
 
@@ -415,14 +395,25 @@
     width: 100px;
     border-radius: 0px;
     padding: 18px 30px;
-    background-color: white;
-    border: 1px solid black;
+    background-color: #57ce5b;
     align-self: center;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
   }
+
+  .add-btn:active{
+    background-color: #3e8e41;
+    box-shadow: 0 5px rgb(255, 255, 255);
+    transform: translateY(4px);
+  }
+
+
   .rating-input .rating-label{
     font-size: 20px;
     align-self:flex-start;
     margin: 5px;
+    color: black;
   }
 
   .comment-component{
@@ -433,7 +424,16 @@
   }
 
 
+  input:focus{
+    outline: none;
+  }
 
+  .selection-container select{
+    color: blue;
+    margin-top: 30px;
+    width:  50vw;
+
+  }
 
 
 /* input slider range styling*/

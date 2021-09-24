@@ -15,56 +15,56 @@ function App() {
   const [toggleFetch, setToggleFetch] = useState(true)
 
   useEffect(() => {
-      const getAnime = async () => {
-        const response = await axios.get(baseURL, config);
+    const getAnime = async () => {
+      const response = await axios.get(baseURL, config);
 
-          const url = `https://api.airtable.com/v0/appBRk6PwEffSic8E/comments`
-          const respComments =  await axios.get(url, config)
-          const comments = respComments.data.records;
-          const animeWithComments = response.data.records.map((anime) => {
-            return{
-              ...anime,
-              fields: {
-                ...anime.fields,
-                comments: anime.fields.comments ? comments.filter((comment) => anime.fields.comments.includes(comment.id)) : []
-              }
-            }
-          })
-          // console.log(animeWithComments)
-          setAnimes(animeWithComments)
+      const url = `https://api.airtable.com/v0/appBRk6PwEffSic8E/comments`
+      const respComments = await axios.get(url, config)
+      const comments = respComments.data.records;
+      const animeWithComments = response.data.records.map((anime) => {
+        return {
+          ...anime,
+          fields: {
+            ...anime.fields,
+            comments: anime.fields.comments ? comments.filter((comment) => anime.fields.comments.includes(comment.id)) : []
+          }
         }
-        
-        getAnime()
-  },[toggleFetch])
+      })
+      // console.log(animeWithComments)
+      setAnimes(animeWithComments)
+    }
+
+    getAnime()
+  }, [toggleFetch])
 
   return (
     <div className="App">
-    <Nav/>
-    <Route exact path="/">
-    {<input className="home-searchbar" placeholder="search"/>}
-    <div className="item-container">
-    {animes.map((anime) => (
-      <Anime key ={anime.id} anime={anime} setToggleFetch={setToggleFetch}/>
-    )
-    )}
-    </div>
-    </Route>
-
-    <Route path="/new">
-      <Form anime={animes} setToggleFetch={setToggleFetch}/>
-    </Route>
-
-      <Route path="/comment/:id">
-      <Comments anime={animes}/>
+      <Nav />
+      <Route exact path="/">
+        {<input className="home-searchbar" placeholder="search" />}
+        <div className="item-container">
+          {animes.map((anime) => (
+            <Anime key={anime.id} anime={anime} setToggleFetch={setToggleFetch} />
+          )
+          )}
+        </div>
       </Route>
 
-    <Route path="/more">
-    <MoreInfo/>
-    </Route>
+      <Route path="/new">
+        <Form anime={animes} setToggleFetch={setToggleFetch} />
+      </Route>
 
-    <Route path="/edit/:id">
-      <Form anime={animes} setToggleFetch={setToggleFetch}/>
-    </Route>
+      <Route path="/comment/:id">
+        <Comments anime={animes} />
+      </Route>
+
+      <Route path="/more">
+        <MoreInfo />
+      </Route>
+
+      <Route path="/edit/:id">
+        <Form anime={animes} setToggleFetch={setToggleFetch} />
+      </Route>
 
     </div>
   );

@@ -16,7 +16,7 @@ export default function Comments(props) {
         }
         const resp = await axios.post(commentURL, {fields: newComment}, config)
     }
-
+    
     return(
         <div className="comment-component">
         <h1>This is the comment component</h1>
