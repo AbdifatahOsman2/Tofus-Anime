@@ -16,7 +16,7 @@ function Anime(props) {
             <div className="anime">
                 <h2 className="name-cont">{name}</h2>
                 <h3 className="author-cont">{author}</h3>
-                <p className="rating-cont">Rating: {rating}</p>
+                <p className="rating-cont">Rating:{rating}</p>
                 <div className="comments-container"> {
                     comments.map((comment) => (
                         <p className="comment">-{comment.fields.comment}</p>
