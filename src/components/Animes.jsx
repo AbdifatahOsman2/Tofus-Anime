@@ -20,10 +20,10 @@ function Anime(props) {
         <div className="anime">
             <h2 className="name-cont">{name}</h2>
             <h3 className="author-cont">{author}</h3>
-            <p className="rating-cont">{rating}/10</p>
+            <p className="rating-cont">Rating: {rating}/10</p>
            <div className="comments-container"> {
                 comments.map((comment) => (
-                    <p className="comment">{comment.fields.comment}</p>
+                    <p className="comment">-{comment.fields.comment}</p>
                 ))}
             </div>
             <button className="delete-btn" onClick={handleDelete}>Delete</button>

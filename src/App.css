@@ -1,9 +1,9 @@
 
   .App {
-    background: #D3D2D2;
-    background: -webkit-radial-gradient(top right, #D3D2D2, #E1FEDC);
-    background: -moz-radial-gradient(top right, #D3D2D2, #E1FEDC);
-    background: radial-gradient(to bottom left, #D3D2D2, #E1FEDC);
+    background: #A3CDC1;
+    background: -webkit-linear-gradient(bottom, #A3CDC1, #ABF9E3);
+    background: -moz-linear-gradient(bottom, #A3CDC1, #ABF9E3);
+    background: linear-gradient(to top, #A3CDC1, #ABF9E3);
     min-height: 100vh;
     max-width: 100vw;
   }
@@ -36,6 +36,7 @@
     justify-content: flex-end;
     font-weight: bold;
     font-size: 30px;
+    text-transform: uppercase
   }
 
   .anime .author-cont{
@@ -61,6 +62,7 @@
     margin: 0px 5px 0px 0px;
     padding-left: 90px;
     font-weight: bold;
+    cursor: pointer;
   }
 
   .anime .edit-link{
@@ -78,6 +80,7 @@
   background-color:#ffec64;
   border-radius:6px;
   border:1px solid #ffaa22;
+  cursor: pointer;
 }
   .nav-bar{
     color: rgb(255, 255, 255);
@@ -197,8 +200,6 @@
     box-shadow: 0 5px rgb(255, 255, 255);
     transform: translateY(4px);
   }
-
-
   .comment-component{
     display: flex;
     flex-direction: column;
@@ -245,8 +246,8 @@
     color: rgb(65, 34, 0);
     font-size: 20px;
     margin-top: 30px;
-    width:  50vw;
-    margin-left: 500px;
+    width:  20vw;
+    margin-left: 750px;
   }
 
   .more-anime a {
@@ -359,7 +360,6 @@ input[type=range]:focus::-ms-fill-upper {
       background: linear-gradient(to top left, #FFFFFF, #FAFBE1);
       min-height: 100vh;
     }
-  
     .item-container{
       background: none;
       color: rgb(255, 255, 255);
@@ -388,7 +388,6 @@ input[type=range]:focus::-ms-fill-upper {
       font-weight: bold;
       font-size: 30px;
     }
-  
     .anime .author-cont{
       font-size: 25px;
     }
@@ -563,6 +562,7 @@ input[type=range]:focus::-ms-fill-upper {
       font-size: 20px;
       margin-top: 30px;
       width:  80vw;
+      margin-left: 20px;
     }
 
 
