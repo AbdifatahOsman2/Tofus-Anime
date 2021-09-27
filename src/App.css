@@ -58,9 +58,8 @@
     visibility: visible;
     color: burlywood;
     font-size: 30px;
-    grid-row: 1 /span 1;
     margin: 0px 5px 0px 0px;
-    grid-column: 7 /span 1;
+    padding-left: 90px;
     font-weight: bold;
   }
 
@@ -147,7 +146,6 @@
     height: 45px;
     font-size: 20px;
     border-radius: 50px;
-
   }
   .author-label{
     font-size: 20px;
@@ -207,7 +205,39 @@
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 10px;
+    align-items: center;
   }
+  .comment-component textarea{
+    width: 300px;
+  }
+  .comment-component button {
+    background: #3498db;
+    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+    background-image: -o-linear-gradient(top, #3498db, #2980b9);
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    -webkit-border-radius: 37;
+    -moz-border-radius: 37;
+    border-radius: 37px;
+    font-family: Courier New;
+    color: #ffffff;
+    font-size: 25px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    margin: 10px;
+  }
+  
+  .comment-component button:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+  }
+
   input:focus{
     outline: none;
   }
@@ -328,7 +358,6 @@ input[type=range]:focus::-ms-fill-upper {
       background: -moz-linear-gradient(bottom right, #FFFFFF, #FAFBE1);
       background: linear-gradient(to top left, #FFFFFF, #FAFBE1);
       min-height: 100vh;
-      max-width: 100vw;
     }
   
     .item-container{
@@ -384,6 +413,7 @@ input[type=range]:focus::-ms-fill-upper {
       margin: 0px 5px 0px 0px;
       grid-column: 7 /span 1;
       font-weight: bold;
+      padding-left: 0px;
     }
   
     .anime .edit-link{
