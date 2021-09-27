@@ -13,7 +13,6 @@ function App() {
 
   const [animes, setAnimes] = useState([])
   const [toggleFetch, setToggleFetch] = useState(true)
-
   useEffect(() => {
     const getAnime = async () => {
       const response = await axios.get(baseURL, config);
@@ -30,7 +29,6 @@ function App() {
           }
         }
       })
-      // console.log(animeWithComments)
       setAnimes(animeWithComments)
     }
 
@@ -55,7 +53,7 @@ function App() {
       </Route>
 
       <Route path="/comment/:id">
-        <Comments anime={animes} setToggleFetch={setToggleFetch}/>
+        <Comments anime={animes} setToggleFetch={setToggleFetch} />
       </Route>
 
       <Route path="/more">
@@ -64,7 +62,7 @@ function App() {
 
       <Route path="/edit/:id">
         <Form anime={animes} setToggleFetch={setToggleFetch} />
-      </Route>  
+      </Route>
 
 
 

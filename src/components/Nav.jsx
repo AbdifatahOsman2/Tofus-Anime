@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 
 function Nav() {
-    return(
+    return (
         <div>
             <nav className="nav-bar">
                 <Link to="/">Home</Link>
