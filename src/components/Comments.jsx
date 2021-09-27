@@ -22,8 +22,8 @@ export default function Comments(props) {
     
     return(
         <div className="comment-component">
-        <h1>This is the comment component</h1>
-        <textarea value={comment} onChange={(e) => setComment(e.target.value)} ></textarea>
+        <h1>Add A comment!</h1>
+        <textarea placeholder="comment-name" rows="5" value={comment} onChange={(e) => setComment(e.target.value)} ></textarea>
         <button onClick={handleComment}>Add Comment</button>
         </div>
     )

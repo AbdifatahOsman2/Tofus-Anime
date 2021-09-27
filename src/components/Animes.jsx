@@ -26,7 +26,6 @@ function Anime(props) {
                     <p className="comment">{comment.fields.comment}</p>
                 ))}
             </div>
-
             <button className="delete-btn" onClick={handleDelete}>Delete</button>
             <Link className="edit-link" to={`/edit/${props.anime.id}`}>
                 <button className="edit-btn">Edit</button>

@@ -1,216 +1,13 @@
-@media screen and (max-width: 2560px) {
-
-.App {
-  text-align: center;
-
-  grid-gap: 10px;
-}
-
-.nav-bar{
-  color: rgb(255, 255, 255);
-  display: flex;
-  justify-content: space-evenly;
-  background-color: rgb(0, 0, 0);
-  grid-row: 2 / span 1;
-
-}
-
-.nav-bar a {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  font-size: 25px;
-  border: none;
-  padding: 5px;
-  transition-duration: 1s;
-}
-
-.nav-bar a:hover {
-  background-color: rgb(60, 69, 143);
-}
-
-.item-container{
-  background: none;
-  color: rgb(255, 255, 255);
-  align-items: center;
-  width: 300px;
-  margin: 10px;
-  margin-left: 400px;
-  
-}
-
-.anime {
-  display: flex;
-  flex-direction: column;
-  margin: 10px;
-  border-radius: 20px;
-  font-size: 10px;
-  align-items: center;
-  width: 50vw;
-  box-shadow: -3px -2px 5px rgb(17, 15, 15);
-}
-.anime .name-cont {
-  justify-content: flex-end;
-  font-weight: bold;
-  font-size: 20px;
-}
-.anime .author-cont{
-  grid-row: 5 / span 3;
-  grid-column: 1 / span 3;
-  font-size: 15px;
-}
-
-.anime .rating-cont{
-  grid-row: 5 /span 1;
-  grid-column: 7.5 / 1;
-  font-size: 15px;
-}
-
-.anime .delete-btn{
-  grid-row: 1 /span 1;
-  grid-column: 7 /span 1;
-  visibility: hidden;
-}
-.anime .delete-btn::after{
-  content: "x";
-  visibility: visible;
-  color: burlywood;
-  font-size: 30px;
-  grid-row: 1 /span 1;
-  margin: 0px 5px 0px 0px;
-  grid-column: 7 /span 1;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.anime .edit-link{
-  grid-row: 5 /span 1;
-  grid-column: 7 /span 1;
-}
-.anime .edit-btn{
-  grid-row: 5 /span 1;
-  grid-column: 7 /span 1;
-  font-size: 15px;
-  pad: 5px;
-  margin: 5px 0px 0px 0px;
-  border: 3px solid rgb(253, 104, 4);
-  text-align: center;
-  box-shadow:inset 0px 1px 0px 0px #fff6af;
-  background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
-  background-color:#ffec64;
-  border-radius:6px;
-  border:1px solid #ffaa22;
-  cursor: pointer;
-}
-
-.add-comment-link{
-  grid-row: 5/ span 1;
-  grid-column: 6/ span 1;
-}
-
-.form-component{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-.anime-input-container{
-  padding: 5px;
-  margin: 5px;
-  font-size: 30px;
-}
-.anime-input{
-  margin: 10px;
-  width: 300px;
-  height: 25px;
-  font-size: 20px;
-  border-radius: 50px;
-}
-.anime-label{
-  font-size: 20px;
-  float: left;
-  margin-left: 15px;
-  visibility: hidden;
-}
-
-.author-input-container{
-  padding: 5px;
-  margin: 5px;
-  font-size: 30px;
-}
-.author-input{
-  margin: 10px;
-  width: 300px;
-  height: 25px;
-  font-size: 20px;
-  border-radius: 50px;
-
-}
-.author-label{
-  font-size: 20px;
-  float: left;
-  margin-left: 15px;
-  visibility: hidden;
-}
-.comments-input{
-  margin: 10px;
-  font-size: 50px;
-  justify-content: space-evenly;
-}
-.comments-input .comment-maker {
-  padding: 1px;
-  height: 120px;
-  width: 305px;
-  border-radius: 20px;
-  padding: 10px;
-}
-.comment-label{
-  font-size: 20px;
-  float: left;
-  margin-left: 10px;
-  visibility: hidden;
-}
-.rating-input{
-  padding: 10px;
-  margin: 10px;
-  margin-left: 100px;
-  font-size: 50px;
-  align-self: center;
-  display: flex;
-  width: 400px;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.add-btn{
-  margin: 0px;
-  display: inline;
-  width: 100px;
-  border-radius: 0px;
-  padding: 18px 30px;
-  background-color: white;
-  border: 1px solid black;
-  align-self: center;
-
-}
-
-.rating-input .rating-label{
-  font-size: 20px;
-  align-self:flex-start;
-  margin: 5px;
-  color: white;
-}
-
-
-}
-@media screen and (max-width: 480px) {
 
   .App {
-    background: #FFFFFF;
-    background: -webkit-linear-gradient(bottom right, #FFFFFF, #FAFBE1);
-    background: -moz-linear-gradient(bottom right, #FFFFFF, #FAFBE1);
-    background: linear-gradient(to top left, #FFFFFF, #FAFBE1);
+    background: #D3D2D2;
+    background: -webkit-radial-gradient(top right, #D3D2D2, #E1FEDC);
+    background: -moz-radial-gradient(top right, #D3D2D2, #E1FEDC);
+    background: radial-gradient(to bottom left, #D3D2D2, #E1FEDC);
     min-height: 100vh;
     max-width: 100vw;
   }
-
+  
   .item-container{
     background: none;
     color: rgb(255, 255, 255);
@@ -229,10 +26,11 @@
     border-radius: 20px;
     font-size: 10px;
     align-items: center;
-    width: 90vw;
+    width: 30vw;
     box-shadow: -3px -2px 5px rgb(17, 15, 15);
     min-height: 200px;
     flex-wrap: wrap;
+    margin-left: 650px;
   }
   .anime .name-cont {
     justify-content: flex-end;
@@ -306,6 +104,7 @@
   }
   .home-searchbar{
     margin: 10px;
+    margin-left: 900px;
     width: 200px;
     height: 25px;
     font-size: 20px;
@@ -321,6 +120,7 @@
     padding: 5px;
     margin: 5px;
     font-size: 30px;
+    margin-left: 700px;
   }
   .anime-input{
     margin: 10px;
@@ -339,6 +139,7 @@
     padding: 5px;
     margin: 5px;
     font-size: 30px;
+    margin-left: 700px;
   }
   .author-input{
     margin: 10px;
@@ -368,8 +169,18 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 80vw;
+    align-items: center;
   }
+  .rating-input .rating-label{
+      font-size: 20px;
+      align-self:flex-start;
+      margin: 5px;
+      color: black;
+      visibility: hidden;
+    }
+  .rating-input .input-meter{
+      width: 300px;
+    }
   .add-btn{
     margin: 0px;
     display: inline;
@@ -390,13 +201,6 @@
   }
 
 
-  .rating-input .rating-label{
-    font-size: 20px;
-    align-self:flex-start;
-    margin: 5px;
-    color: black;
-  }
-
   .comment-component{
     display: flex;
     flex-direction: column;
@@ -408,12 +212,29 @@
     outline: none;
   }
   .selection-container select{
-    color: blue;
+    color: rgb(65, 34, 0);
     font-size: 20px;
     margin-top: 30px;
-    width:  80vw;
+    width:  50vw;
+    margin-left: 500px;
   }
 
+  .more-anime a {
+    text-decoration: none;
+    color: black;
+    font-size: 40px;
+  }
+  .more-anime{
+    margin: 50px 0px 0px 750px;
+  }
+  .home-searchbar{
+    margin: 10px;
+    margin-left: 850px;
+    width: 200px;
+    height: 25px;
+    font-size: 20px;
+    border-radius: 8px;
+  }
 
 /* input slider range styling*/
 input[type=range] {
@@ -489,7 +310,6 @@ input[type=range]::-ms-thumb {
   border-radius: 50px;
   cursor: pointer;
   margin-top: 0px;
-  /*Needed to keep the Edge thumb centred*/
 }
 input[type=range]:focus::-ms-fill-lower {
   background: #ffd900;
@@ -497,18 +317,320 @@ input[type=range]:focus::-ms-fill-lower {
 input[type=range]:focus::-ms-fill-upper {
   background: #ffdd1a;
 }
-/*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
-how to remove the virtical space around the range input in IE*/
-@supports (-ms-ime-align:auto) {
-  /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
-  input[type=range] {
-    margin: 0;
-    /*Edge starts the margin from the thumb, not the track as other browsers do*/
+
+
+  
+  @media screen and (max-width: 480px) {
+  
+    .App {
+      background: #FFFFFF;
+      background: -webkit-linear-gradient(bottom right, #FFFFFF, #FAFBE1);
+      background: -moz-linear-gradient(bottom right, #FFFFFF, #FAFBE1);
+      background: linear-gradient(to top left, #FFFFFF, #FAFBE1);
+      min-height: 100vh;
+      max-width: 100vw;
+    }
+  
+    .item-container{
+      background: none;
+      color: rgb(255, 255, 255);
+      align-items: center;
+      width: 300px;
+      margin:10px;
+    }
+    .anime {
+      display: flex;
+      flex-direction: column;
+      background: #02124D;
+      background: -webkit-radial-gradient(center, #02124D, #011C38);
+      background: -moz-radial-gradient(center, #02124D, #011C38);
+      background: radial-gradient(ellipse at center, #02124D, #011C38);
+      margin: 10px;
+      border-radius: 20px;
+      font-size: 10px;
+      align-items: center;
+      width: 90vw;
+      box-shadow: -3px -2px 5px rgb(17, 15, 15);
+      min-height: 200px;
+      flex-wrap: wrap;
+    }
+    .anime .name-cont {
+      justify-content: flex-end;
+      font-weight: bold;
+      font-size: 30px;
+    }
+  
+    .anime .author-cont{
+      font-size: 25px;
+    }
+    .anime .rating-cont{
+      font-size: 15px;
+    }
+    .anime .comments-cont{
+      font-size: 19px;
+    }
+    .anime .delete-btn{
+      visibility: hidden;
+      order: -1;
+      justify-self: flex-end;
+      margin-left: 250px;
+    }
+    .anime .delete-btn::after{
+      content: "x";
+      visibility: visible;
+      color: burlywood;
+      font-size: 30px;
+      grid-row: 1 /span 1;
+      margin: 0px 5px 0px 0px;
+      grid-column: 7 /span 1;
+      font-weight: bold;
+    }
+  
+    .anime .edit-link{
+      order: 8;
+      visibility: hidden;
+    }
+  
+  .add-comment{
+    font-size: 20px;
+    margin: 5px 0px 0px 0px;
+    border: 3px solid rgb(253, 104, 4);
+    text-align: center;
+    box-shadow:inset 0px 1px 0px 0px #fff6af;
+    background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+    background-color:#ffec64;
+    border-radius:6px;
+    border:1px solid #ffaa22;
   }
-}
-/* input slider range styling*/
+    .nav-bar{
+      color: rgb(255, 255, 255);
+      display: flex;
+      justify-content: space-between;
+      background-color: rgb(0, 0, 0);
+      grid-row: 2 / span 1;
+    }
+    .nav-bar a {
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      font-size: 30px;
+      border: none;
+      padding: 5px;
+    }
+  
+    .nav-bar .add-button{
+      font-weight: bolder;
+    }
+  
+    .nav-bar a:focus {
+      background-color: rgb(0, 23, 194);
+    }
+    .home-searchbar{
+      margin: 10px;
+      width: 200px;
+      height: 25px;
+      font-size: 20px;
+      border-radius: 8px;
+    }
+  
+    .form-component{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+    .anime-input-container{
+      padding: 5px;
+      margin: 5px;
+      font-size: 30px;
+    }
+    .anime-input{
+      margin: 10px;
+      max-width: 100vw;
+      height: 45px;
+      font-size: 20px;
+      border-radius: 50px;
+    }
+    .anime-label{
+      font-size: 20px;
+      float: left;
+      margin-left: 15px;
+    }
+  
+    .author-input-container{
+      padding: 5px;
+      margin: 5px;
+      font-size: 30px;
+    }
+    .author-input{
+      margin: 10px;
+      max-width: 100vw;
+      height: 45px;
+      font-size: 20px;
+      border-radius: 50px;
+  
+    }
+    .author-label{
+      font-size: 20px;
+      float: left;
+      margin-left: 15px;
+    }
+    .comments-container{
+      font-size: 30px;
+  
+    }
+    .comments-container .comment{
+      color: darkgoldenrod;
+   
+    }
+    .rating-input{
+      padding: 10px;
+      margin: 10px;
+      font-size: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 80vw;
+    }
+    .add-btn{
+      margin: 0px;
+      display: inline;
+      width: 100px;
+      border-radius: 0px;
+      padding: 18px 30px;
+      background-color: #57ce5b;
+      align-self: center;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 9px #999;
+    }
+  
+    .add-btn:active{
+      background-color: #3e8e41;
+      box-shadow: 0 5px rgb(255, 255, 255);
+      transform: translateY(4px);
+    }
+  
+  
+    .rating-input .rating-label{
+      font-size: 20px;
+      align-self:flex-start;
+      margin: 5px;
+      color: black;
+      visibility: visible;
+    }
+  
+    .comment-component{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 10px;
+    }
+    input:focus{
+      outline: none;
+    }
+    .selection-container select{
+      color: blue;
+      font-size: 20px;
+      margin-top: 30px;
+      width:  80vw;
+    }
 
 
+  .more-anime a {
+    text-decoration: none;
+    color: rgb(119, 9, 9);
+    font-size: 40px;
+  }
+  .more-anime{
+    margin: 50px 0px 0px 0px;
+  }
+  
+  
+  /* input slider range styling*/
+  input[type=range] {
+    width: 100%;
+    margin: 4.3px 0;
+    background-color: transparent;
+    -webkit-appearance: none;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    background: #ffd900;
+    border: 0.2px solid #000101;
+    border-radius: 1.3px;
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    margin-top: -4.5px;
+    width: 16px;
+    height: 17px;
+    background: rgba(255, 217, 0, 0.9);
+    border: 1px solid #000000;
+    border-radius: 50px;
+    cursor: pointer;
+    -webkit-appearance: none;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ffdd1a;
+  }
+  input[type=range]::-moz-range-track {
+    background: #ffd900;
+    border: 0.2px solid #000101;
+    border-radius: 1.3px;
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+  }
+  input[type=range]::-moz-range-thumb {
+    width: 16px;
+    height: 17px;
+    background: rgba(255, 217, 0, 0.9);
+    border: 1px solid #000000;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  input[type=range]::-ms-track {
+    background: transparent;
+    border-color: transparent;
+    border-width: 5.3px 0;
+    color: transparent;
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: #e6c300;
+    border: 0.2px solid #000101;
+    border-radius: 2.6px;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: #ffd900;
+    border: 0.2px solid #000101;
+    border-radius: 2.6px;
+  }
+  input[type=range]::-ms-thumb {
+    width: 16px;
+    height: 17px;
+    background: rgba(255, 217, 0, 0.9);
+    border: 1px solid #000000;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 0px;
+    /*Needed to keep the Edge thumb centred*/
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #ffd900;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #ffdd1a;
+  }
 
-
-}
+  
+  
+  
+  
+  }
