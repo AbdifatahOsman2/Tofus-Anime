@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
   .App {
     background: #A3CDC1;
@@ -517,7 +516,6 @@ input[type=range]:focus::-ms-fill-upper {
     }
     .comments-container{
       font-size: 30px;
-  
     }
     .comments-container .comment{
       color: darkgoldenrod;
@@ -663,17 +661,11 @@ input[type=range]:focus::-ms-fill-upper {
     border-radius: 50px;
     cursor: pointer;
     margin-top: 0px;
-    /*Needed to keep the Edge thumb centred*/
   }
   input[type=range]:focus::-ms-fill-lower {
     background: #ffd900;
   }
   input[type=range]:focus::-ms-fill-upper {
     background: #ffdd1a;
-  }
-
-  
-  
-  
-  
+  }  
   }

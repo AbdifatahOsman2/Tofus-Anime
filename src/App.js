@@ -10,13 +10,11 @@ import Comments from "./components/Comments";
 import './App.css';
 
 function App() {
-
   const [animes, setAnimes] = useState([])
   const [toggleFetch, setToggleFetch] = useState(true)
   useEffect(() => {
     const getAnime = async () => {
       const response = await axios.get(baseURL, config);
-
       const url = `https://api.airtable.com/v0/appBRk6PwEffSic8E/comments`
       const respComments = await axios.get(url, config)
       const comments = respComments.data.records;
@@ -31,7 +29,6 @@ function App() {
       })
       setAnimes(animeWithComments)
     }
-
     getAnime()
   }, [toggleFetch])
 
@@ -47,7 +44,6 @@ function App() {
           )}
         </div>
       </Route>
-
       <Route path="/new">
         <Form anime={animes} setToggleFetch={setToggleFetch} />
       </Route>
